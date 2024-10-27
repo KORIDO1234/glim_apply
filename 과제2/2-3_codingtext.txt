@@ -1,0 +1,17 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<string> order) {
+    int answer = 0;
+    for (const string& menu : order) {
+        if (menu == "iceamericano" || menu == "americanoice" || menu == "hotamericano" || menu == "americanohot" || menu == "americano" || menu == "anything") {
+            answer += 4500;
+        } 
+        else {
+            answer += 5000;
+        }
+    }
+    return answer;
+}

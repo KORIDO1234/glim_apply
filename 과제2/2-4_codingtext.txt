@@ -1,0 +1,27 @@
+#include <string>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+int solution(int a, int b) {
+    int counta = 0;
+    int countb = 0;
+    int a1 = a;
+    int b1 = b;
+    while (a1 != 0) {
+        a1 = a1 / 10;
+        counta++;
+    }
+    while (b1 != 0) {
+        b1 = b1 / 10;
+        countb++;
+    }
+    int result1 = a*pow(10,countb) + b; 
+    int result2 = b*pow(10,counta) + a;
+    if(result1 >= result2){
+        return result1;
+    }
+    else{
+        return result2;
+    }
+}
